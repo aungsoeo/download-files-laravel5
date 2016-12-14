@@ -7,7 +7,9 @@ can do it in larave 5.3 .
 #Project youtube tutorial link
 ======
 
+>>>
 Video Tutorial for this project can be found on the https://www.youtube.com/watch?v=AlnackyPJPY.
+>>>
 
 
 #Way
@@ -51,7 +53,7 @@ public function downfunc(){
 <a href="download/{{$down->file_name}}" download="{{$down->file_name}}">	{{$down->file_name}}	</a>
 ```
 
->Here By doing **download={{$down->file_name}}** ,**{$down->file_name}}** will be your downloaded file name.
+* Here By doing **download={{$down->file_name}}** ,**{$down->file_name}}** will be your downloaded file name.
 
->**href="download/{{$down->file_name}}"** this one just telling where your file is located like yourproject/public/download/kijia.pdf
+* **href="download/{{$down->file_name}}"** this one just telling where your file is located like yourproject/public/download/kijia.pdf
 
