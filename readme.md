@@ -4,11 +4,13 @@ Laravel web application where shows how to download Files From database (.pdf,.d
 can do it in larave 5.3 .
 
 ##Project youtube tutorial link
+======
 
 Video Tutorial for this project can be found on the [Laravel 5.3, 5.2 -Download Files From Database (.pdf,.doc,.png,.jpg,.xlsl etc)](https://www.youtube.com/watch?v=AlnackyPJPY).
 
 
 ##Way
+======
 
 in controller
 
@@ -37,6 +39,7 @@ public function downfunc(){
 
 
 ##'download=" "' in <a> tag
+======
 
 ```laravel
 <a href="download/{{$down->file_name}}" download="{{$down->file_name}}">	{{$down->file_name}}	</a>
