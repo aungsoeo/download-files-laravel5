@@ -63,8 +63,8 @@ like your file name lara.doc then download file name will be lara.doc .you can m
 
 #Important directory in this project
 ======
-- [x] Yourprojectname
-    - [ ] app
-        - [ ] Http
-        - [x] route.php
-        - [ ] Sub-task 3
+- Yourprojectname
+    - app
+        - Http
+        - route.php
+        - Sub-task 3
