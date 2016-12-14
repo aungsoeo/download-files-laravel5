@@ -20,6 +20,7 @@ public function downfunc(){
     	$downloads=DB::table('downloadpdf')->get();
     	return view('download.viewfile',compact('downloads'));
     }
+    
  in **view**
  
  ```laravel
@@ -47,7 +48,7 @@ public function downfunc(){
 <a href="download/{{$down->file_name}}" download="{{$down->file_name}}">	{{$down->file_name}}	</a>
 ```
 
-Here By doing **download={{$down->file_name}}** ,**{$down->file_name}}** will be your downloaded file name.
+>Here By doing **download={{$down->file_name}}** ,**{$down->file_name}}** will be your downloaded file name.
 
-**href="download/{{$down->file_name}}"** this one just telling where your file is located like yourproject/public/download/kijia.pdf
+>**href="download/{{$down->file_name}}"** this one just telling where your file is located like yourproject/public/download/kijia.pdf
 
