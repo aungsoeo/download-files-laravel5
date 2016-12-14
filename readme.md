@@ -1,27 +1,46 @@
-# Laravel PHP Framework
+# Laravel 5.3, 5.2 -Download Files From Database (.pdf,.doc,.png,.jpg,.xlsl etc)
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Laravel web application where shows how to download Files From database (.pdf,.doc,.png,.jpg,.xlsl etc).This project is in laravel 5.2 version but exactly same  way you 
+can do it in larave 5.3 .
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+##Project youtube tutorial link
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Video Tutorial for this project can be found on the [Laravel 5.3, 5.2 -Download Files From Database (.pdf,.doc,.png,.jpg,.xlsl etc)](https://www.youtube.com/watch?v=AlnackyPJPY).
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+##Way
 
-## Contributing
+in controller
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+use DB;
+public function downfunc(){
+    	$downloads=DB::table('downloadpdf')->get();
+    	return view('download.viewfile',compact('downloads'));
+    }
+ in view
+ 
+ @foreach($downloads as $down)
+		<tr>
+			<td>{{$down->file_title}}</td>
+			<td>{{$down->created_at}}</td>
+			<td>
+				<a href="download/{{$down->file_name}}" download="{{$down->file_name}}">
+					<button type="button" class="btn btn-primary">
+						<i class="glyphicon glyphicon-download">
+							Download
+						</i>
+				   </button>
+				</a>
+			</td>
+		</tr>
+	@endforeach
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+##'download=" "' in <a> tag
 
-## License
+<a href="download/{{$down->file_name}}" download="{{$down->file_name}}">	{{$down->file_name}}	</a>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Here By doing download={{$down->file_name}} ,{$down->file_name}} will be your downloaded file name.
+
+href="download/{{$down->file_name}}" this one just telling where your file is located like yourproject/public/download/kijia.pdf
+
