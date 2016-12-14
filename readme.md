@@ -4,7 +4,7 @@ Laravel web application where shows how to download Files From database (.pdf,.d
 can do it in larave 5.3 .
 
 
-#Project youtube tutorial link
+Project youtube tutorial link
 ======
 
 >>>
@@ -12,7 +12,7 @@ Video Tutorial for this project can be found on the https://www.youtube.com/watc
 >>>
 
 
-#Way
+Way
 ======
 
 in **controller**
@@ -46,7 +46,7 @@ public function downfunc(){
 	@endforeach
 ```
 
-#'download=" "' in  ``` <a> tag  ```
+'download=" "' in  ``` <a> tag  ```
 ======
 
 ```laravel
@@ -61,7 +61,7 @@ like your file name lara.doc then download file name will be lara.doc .you can m
 * **href="download/{{$down->file_name}}"** this one just telling where your file is located like yourproject/public/download/kijia.pdf
 
 
-#Important directory in this project
+Important directory in this project
 ======
 - downloadfileslaravel(projectname)
     - app
@@ -69,7 +69,8 @@ like your file name lara.doc then download file name will be lara.doc .you can m
             - controllers
                 - DownloadController.php (controller)
         - route.php
-    -resources  
-        -views
-            -download
-                -viewfile.blade.php  (view)
+    - resources
+        - views
+            - download
+                - viewfile.blade.php  (view)
+
