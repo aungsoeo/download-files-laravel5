@@ -38,7 +38,9 @@ public function downfunc(){
 
 ##'download=" "' in <a> tag
 
+```laravel
 <a href="download/{{$down->file_name}}" download="{{$down->file_name}}">	{{$down->file_name}}	</a>
+```
 
 Here By doing download={{$down->file_name}} ,{$down->file_name}} will be your downloaded file name.
 
