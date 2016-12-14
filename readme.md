@@ -63,8 +63,13 @@ like your file name lara.doc then download file name will be lara.doc .you can m
 
 #Important directory in this project
 ======
-- Yourprojectname
+- downloadfileslaravel(projectname)
     - app
         - Http
+            - controllers
+                - DownloadController.php (controller)
         - route.php
-        - Sub-task 3
+    -resources  
+        -views
+            -download
+                -viewfile.blade.php  (view)
