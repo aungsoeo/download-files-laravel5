@@ -15,11 +15,14 @@ Video Tutorial for this project can be found on the https://www.youtube.com/watc
 
 in **controller**
 
+```laravel
 use DB;
 public function downfunc(){
     	$downloads=DB::table('downloadpdf')->get();
     	return view('download.viewfile',compact('downloads'));
     }
+    
+```
     
  in **view**
  
