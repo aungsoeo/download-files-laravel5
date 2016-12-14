@@ -59,11 +59,12 @@ public function downfunc(){
 like your file name lara.doc then download file name will be lara.doc .you can modify here to chose your download file
 
 * **href="download/{{$down->file_name}}"** this one just telling where your file is located like yourproject/public/download/kijia.pdf
-* 
+
+
 #Important directory in this project
 ======
-- [x] Completed task
-- [ ] Incomplete task
-    - [ ] Sub-task 1
-    - [x] Sub-task 2
-    - [ ] Sub-task 3
+- [x] Yourprojectname
+    - [ ] app
+        - [ ] Http
+        - [x] route.php
+        - [ ] Sub-task 3
